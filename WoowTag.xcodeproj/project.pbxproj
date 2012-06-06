@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5DD8904158013EA006C41DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DD8903158013EA006C41DE /* UIKit.framework */; };
+		E5DD8906158013EA006C41DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DD8905158013EA006C41DE /* Foundation.framework */; };
+		E5DD8908158013EA006C41DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DD8907158013EA006C41DE /* CoreGraphics.framework */; };
+		E5DD890A158013EA006C41DE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DD8909158013EA006C41DE /* CoreData.framework */; };
+		E5DD8910158013EA006C41DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5DD890E158013EA006C41DE /* InfoPlist.strings */; };
+		E5DD8912158013EA006C41DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DD8911158013EA006C41DE /* main.m */; };
+		E5DD8916158013EA006C41DE /* WoowTagAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DD8915158013EA006C41DE /* WoowTagAppDelegate.m */; };
+		E5DD8919158013EA006C41DE /* WoowTag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5DD8917158013EA006C41DE /* WoowTag.xcdatamodeld */; };
+		E5DD891C158013EA006C41DE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DD891B158013EA006C41DE /* RootViewController.m */; };
+		E5DD891E158013EA006C41DE /* DetailViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = E5DD891D158013EA006C41DE /* DetailViewController.h */; };
+		E5DD8920158013EA006C41DE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DD891F158013EA006C41DE /* DetailViewController.m */; };
+		E5DD8923158013EA006C41DE /* RootViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DD8921158013EA006C41DE /* RootViewController_iPhone.xib */; };
+		E5DD8926158013EA006C41DE /* RootViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DD8924158013EA006C41DE /* RootViewController_iPad.xib */; };
+		E5DD8929158013EA006C41DE /* DetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DD8927158013EA006C41DE /* DetailViewController_iPhone.xib */; };
+		E5DD892C158013EA006C41DE /* DetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DD892A158013EA006C41DE /* DetailViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E5DD88FF158013EA006C41DE /* WoowTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoowTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DD8903158013EA006C41DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E5DD8905158013EA006C41DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E5DD8907158013EA006C41DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E5DD8909158013EA006C41DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E5DD890D158013EA006C41DE /* WoowTag-Info.plist */ = {isa = PBXFileReference; path = "WoowTag-Info.plist"; sourceTree = "<group>"; };
+		E5DD890F158013EA006C41DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5DD8911158013EA006C41DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5DD8913158013EA006C41DE /* WoowTag-Prefix.pch */ = {isa = PBXFileReference; path = "WoowTag-Prefix.pch"; sourceTree = "<group>"; };
+		E5DD8914158013EA006C41DE /* WoowTagAppDelegate.h */ = {isa = PBXFileReference; path = WoowTagAppDelegate.h; sourceTree = "<group>"; };
+		E5DD8915158013EA006C41DE /* WoowTagAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoowTagAppDelegate.m; sourceTree = "<group>"; };
+		E5DD8918158013EA006C41DE /* WoowTag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WoowTag.xcdatamodel; sourceTree = "<group>"; };
+		E5DD891A158013EA006C41DE /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		E5DD891B158013EA006C41DE /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E5DD891D158013EA006C41DE /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E5DD891F158013EA006C41DE /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E5DD8922158013EA006C41DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController_iPhone.xib; sourceTree = "<group>"; };
+		E5DD8925158013EA006C41DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController_iPad.xib; sourceTree = "<group>"; };
+		E5DD8928158013EA006C41DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		E5DD892B158013EA006C41DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5DD88FC158013EA006C41DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5DD8904158013EA006C41DE /* UIKit.framework in Frameworks */,
+				E5DD8906158013EA006C41DE /* Foundation.framework in Frameworks */,
+				E5DD8908158013EA006C41DE /* CoreGraphics.framework in Frameworks */,
+				E5DD890A158013EA006C41DE /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5DD88F4158013EA006C41DE = {
+			isa = PBXGroup;
+			children = (
+				E5DD890B158013EA006C41DE /* WoowTag */,
+				E5DD8902158013EA006C41DE /* Frameworks */,
+				E5DD8900158013EA006C41DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5DD8900158013EA006C41DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5DD88FF158013EA006C41DE /* WoowTag.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5DD8902158013EA006C41DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5DD8903158013EA006C41DE /* UIKit.framework */,
+				E5DD8905158013EA006C41DE /* Foundation.framework */,
+				E5DD8907158013EA006C41DE /* CoreGraphics.framework */,
+				E5DD8909158013EA006C41DE /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5DD890B158013EA006C41DE /* WoowTag */ = {
+			isa = PBXGroup;
+			children = (
+				E5DD8914158013EA006C41DE /* WoowTagAppDelegate.h */,
+				E5DD8915158013EA006C41DE /* WoowTagAppDelegate.m */,
+				E5DD891A158013EA006C41DE /* RootViewController.h */,
+				E5DD891B158013EA006C41DE /* RootViewController.m */,
+				E5DD891D158013EA006C41DE /* DetailViewController.h */,
+				E5DD891F158013EA006C41DE /* DetailViewController.m */,
+				E5DD8921158013EA006C41DE /* RootViewController_iPhone.xib */,
+				E5DD8924158013EA006C41DE /* RootViewController_iPad.xib */,
+				E5DD8927158013EA006C41DE /* DetailViewController_iPhone.xib */,
+				E5DD892A158013EA006C41DE /* DetailViewController_iPad.xib */,
+				E5DD8917158013EA006C41DE /* WoowTag.xcdatamodeld */,
+				E5DD890C158013EA006C41DE /* Supporting Files */,
+			);
+			path = WoowTag;
+			sourceTree = "<group>";
+		};
+		E5DD890C158013EA006C41DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5DD890D158013EA006C41DE /* WoowTag-Info.plist */,
+				E5DD890E158013EA006C41DE /* InfoPlist.strings */,
+				E5DD8911158013EA006C41DE /* main.m */,
+				E5DD8913158013EA006C41DE /* WoowTag-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5DD88FE158013EA006C41DE /* WoowTag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5DD892F158013EA006C41DE /* Build configuration list for PBXNativeTarget "WoowTag" */;
+			buildPhases = (
+				E5DD88FB158013EA006C41DE /* Sources */,
+				E5DD88FC158013EA006C41DE /* Frameworks */,
+				E5DD88FD158013EA006C41DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WoowTag;
+			productName = WoowTag;
+			productReference = E5DD88FF158013EA006C41DE /* WoowTag.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5DD88F6158013EA006C41DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = autoscout24;
+			};
+			buildConfigurationList = E5DD88F9158013EA006C41DE /* Build configuration list for PBXProject "WoowTag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E5DD88F4158013EA006C41DE;
+			productRefGroup = E5DD8900158013EA006C41DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5DD88FE158013EA006C41DE /* WoowTag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5DD88FD158013EA006C41DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5DD8910158013EA006C41DE /* InfoPlist.strings in Resources */,
+				E5DD891E158013EA006C41DE /* DetailViewController.h in Resources */,
+				E5DD8923158013EA006C41DE /* RootViewController_iPhone.xib in Resources */,
+				E5DD8926158013EA006C41DE /* RootViewController_iPad.xib in Resources */,
+				E5DD8929158013EA006C41DE /* DetailViewController_iPhone.xib in Resources */,
+				E5DD892C158013EA006C41DE /* DetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5DD88FB158013EA006C41DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5DD8912158013EA006C41DE /* main.m in Sources */,
+				E5DD8916158013EA006C41DE /* WoowTagAppDelegate.m in Sources */,
+				E5DD8919158013EA006C41DE /* WoowTag.xcdatamodeld in Sources */,
+				E5DD891C158013EA006C41DE /* RootViewController.m in Sources */,
+				E5DD8920158013EA006C41DE /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E5DD890E158013EA006C41DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5DD890F158013EA006C41DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E5DD8921158013EA006C41DE /* RootViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5DD8922158013EA006C41DE /* en */,
+			);
+			name = RootViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		E5DD8924158013EA006C41DE /* RootViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5DD8925158013EA006C41DE /* en */,
+			);
+			name = RootViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		E5DD8927158013EA006C41DE /* DetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5DD8928158013EA006C41DE /* en */,
+			);
+			name = DetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		E5DD892A158013EA006C41DE /* DetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5DD892B158013EA006C41DE /* en */,
+			);
+			name = DetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5DD892D158013EA006C41DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5DD892E158013EA006C41DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5DD8930158013EA006C41DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WoowTag/WoowTag-Prefix.pch";
+				INFOPLIST_FILE = "WoowTag/WoowTag-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E5DD8931158013EA006C41DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WoowTag/WoowTag-Prefix.pch";
+				INFOPLIST_FILE = "WoowTag/WoowTag-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5DD88F9158013EA006C41DE /* Build configuration list for PBXProject "WoowTag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5DD892D158013EA006C41DE /* Debug */,
+				E5DD892E158013EA006C41DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5DD892F158013EA006C41DE /* Build configuration list for PBXNativeTarget "WoowTag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5DD8930158013EA006C41DE /* Debug */,
+				E5DD8931158013EA006C41DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5DD8917158013EA006C41DE /* WoowTag.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5DD8918158013EA006C41DE /* WoowTag.xcdatamodel */,
+			);
+			currentVersion = E5DD8918158013EA006C41DE /* WoowTag.xcdatamodel */;
+			path = WoowTag.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E5DD88F6158013EA006C41DE /* Project object */;
+}
