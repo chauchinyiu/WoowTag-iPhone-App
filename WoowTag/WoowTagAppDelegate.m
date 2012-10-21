@@ -3,14 +3,13 @@
 //  WoowTag
 //
 //  Created by Chau Chin Yiu on 6/7/12.
-//  Copyright 2012 autoscout24. All rights reserved.
+//  Copyright 2012 WoowTag. All rights reserved.
 //
 
 #import "WoowTagAppDelegate.h"
+#import "GridVC.h"
 
-#import "RootViewController.h"
 
-#import "DetailViewController.h"
 
 @implementation WoowTagAppDelegate
 
@@ -20,31 +19,13 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize navigationController = _navigationController;
 @synthesize splitViewController = _splitViewController;
+@synthesize gridvc=_gridvc ;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        RootViewController *controller = [[RootViewController alloc] initWithNibName:@"RootViewController_iPhone" bundle:nil];
-        self.navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
-        self.window.rootViewController = self.navigationController;
-        controller.managedObjectContext = self.managedObjectContext;
-    } else {
-        RootViewController *controller = [[RootViewController alloc] initWithNibName:@"RootViewController_iPad" bundle:nil];
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
-        
-        DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController_iPad" bundle:nil];
-        
-        self.splitViewController = [[UISplitViewController alloc] init];
-        self.splitViewController.delegate = detailViewController;
-        self.splitViewController.viewControllers = [NSArray arrayWithObjects:navigationController, detailViewController, nil];
-        
-        self.window.rootViewController = self.splitViewController;
-        controller.detailViewController = detailViewController;
-        controller.managedObjectContext = self.managedObjectContext;
-    }
-    [self.window makeKeyAndVisible];
+    
+    [self showGridView]; 
+    //[self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -98,11 +79,42 @@
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
              */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            
         } 
     }
 }
 
+-(void) showGridView{
+    
+//  	 _blendView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+//	_blendView.alpha = 0.0;
+//	_blendView.backgroundColor = [UIColor blackColor];
+	
+	[_window addSubview:_blendView];
+    self.gridvc = [[GridVC alloc] initWithNibName:@"GridVC" bundle:nil];
+    self.navigationController =  [[UINavigationController alloc] initWithRootViewController:self.gridvc];
+    NSLog(@"%@",self.navigationController);
+    UINavigationBar *navBar = [[self navigationController] navigationBar];
+    UIImage *backgroundImage = [UIImage imageNamed:@"blue_nav_bar.png"];
+    [navBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    
+    [[self window] setRootViewController:self.navigationController];
+    [self.window addSubview:[self.navigationController view]];
+     
+
+    self.gridvc.view.alpha = 0.0;
+ 
+    self.gridvc.view.transform = CGAffineTransformMakeScale(0.7,0.7);
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    self.gridvc.view.transform = CGAffineTransformMakeScale(1,1);
+    self.gridvc.view.alpha = 1.0;
+    [UIView commitAnimations];
+    
+   
+    
+    
+}
 #pragma mark - Core Data stack
 
 /**
@@ -135,8 +147,10 @@
     {
         return __managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"WoowTag" withExtension:@"momd"];
-    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
+    //WoowTag
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"woowtag" withExtension:@"momd"];
+    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    //NSLog(@"managedObjectModel == %@",__managedObjectModel);
     return __managedObjectModel;
 }
 
@@ -187,6 +201,32 @@
     return __persistentStoreCoordinator;
 }
 
+- (BOOL) connectedToNetwork
+{
+    // Create zero addy
+    struct sockaddr_in zeroAddress;
+    bzero(&zeroAddress, sizeof(zeroAddress));
+    zeroAddress.sin_len = sizeof(zeroAddress);
+    zeroAddress.sin_family = AF_INET;
+	
+    // Recover reachability flags
+    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+    SCNetworkReachabilityFlags flags;
+	
+    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+    CFRelease(defaultRouteReachability);
+	
+    if (!didRetrieveFlags)
+    {
+        
+        return NO;
+    }
+	
+    BOOL isReachable = flags & kSCNetworkFlagsReachable;
+    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
+    return (isReachable && !needsConnection) ? YES : NO;
+}
+
 #pragma mark - Application's Documents directory
 
 /**
@@ -196,5 +236,34 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+//- (void)startSignificantChangeUpdates
+//{
+//    // Create the location manager if this object does not
+//    // already have one.
+//    if (nil == self.locationManager)
+//        self.locationManager = [[CLLocationManager alloc] init];
+//    
+//    self.locationManager.delegate = self;
+//    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//    self.locationManager.distanceFilter = 100;
+//    [self.locationManager startUpdatingLocation];
+//}
+//- (void)locationManager:(CLLocationManager *)manager
+//    didUpdateToLocation:(CLLocation *)newLocation
+//           fromLocation:(CLLocation *)oldLocation
+//{
+//    // If it's a relatively recent event, turn off updates to save power
+//    NSDate* eventDate = newLocation.timestamp;
+//    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+//    if (abs(howRecent) < 15.0)
+//    {
+//        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+//              newLocation.coordinate.latitude,
+//              newLocation.coordinate.longitude);
+//        [self addCurrentLocationOnMap:newLocation]; 
+//    }
+//    // else skip the event and process the next one.
+//}
 
 @end

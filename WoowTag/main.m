@@ -3,7 +3,7 @@
 //  WoowTag
 //
 //  Created by Chau Chin Yiu on 6/7/12.
-//  Copyright 2012 autoscout24. All rights reserved.
+//  Copyright 2012 WoowTag. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
